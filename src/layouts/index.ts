@@ -1,2 +1,2 @@
-export * from './Nav';
-export * from './CentralColumn';
+export * from './Nav'
+export * from './CentralColumn'

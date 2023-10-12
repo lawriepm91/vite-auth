@@ -1,11 +1,11 @@
-import {useContext} from "react";
-import {Context as AuthContext} from "../context";
+import { useContext } from 'react'
+import { Context as AuthContext } from '../context'
 
 export function useAuthContext() {
-	return useContext(AuthContext);
+  return useContext(AuthContext)
 }
 
 export function useIsAuthenticated() {
-	const context = useAuthContext();
-	return !!context.user;
+  const context = useAuthContext()
+  return !!context.user
 };

@@ -1,30 +1,30 @@
-import {useEffect, useMemo, useReducer} from "react";
-import {authReducer} from "../../reducers";
+import { useEffect, useMemo, useReducer } from 'react'
+import { authReducer } from '../../reducers'
 
 export function useAuth() {
-	const initializer = () => {
-		return JSON.parse(localStorage.getItem("user")) || {user: undefined};
-	};
+  const initializer = () => {
+    return JSON.parse(localStorage.getItem('user')) || { user: undefined }
+  }
 
-	const [state, dispatch] = useReducer(authReducer, {
-		user: undefined,
-	}, initializer);
+  const [state, dispatch] = useReducer(authReducer, {
+    user: undefined
+  }, initializer)
 
-	const value = useMemo(() => ({
-		...state,
-		dispatch,
-	}), [state, dispatch]);
+  const value = useMemo(() => ({
+    ...state,
+    dispatch
+  }), [state, dispatch])
 
-	useEffect(() => {
-		if (!state) {
-			localStorage.removeItem("user");
-			return;
-		}
+  useEffect(() => {
+    if (!state) {
+      localStorage.removeItem('user')
+      return
+    }
 
-		localStorage.setItem("user", JSON.stringify(state));
-	}, [state]);
+    localStorage.setItem('user', JSON.stringify(state))
+  }, [state])
 
-	return {
-		value,
-	};
+  return {
+    value
+  }
 }

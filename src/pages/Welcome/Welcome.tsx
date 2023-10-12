@@ -1,9 +1,9 @@
-import {CentralColumn} from "../../layouts/CentralColumn";
+import { CentralColumn } from '../../layouts/CentralColumn'
 
 export function WelcomePage() {
-	return (
+  return (
 		<CentralColumn>
 			<h1>👋👋 Hello Marcus 👋👋</h1>
 		</CentralColumn>
-	);
+  )
 }

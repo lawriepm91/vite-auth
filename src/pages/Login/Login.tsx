@@ -1,10 +1,10 @@
-import {LoginForm} from "../../components/LoginForm/LoginForm";
-import {CentralColumn} from "../../layouts/CentralColumn";
+import { LoginForm } from '../../components/LoginForm/LoginForm'
+import { CentralColumn } from '../../layouts/CentralColumn'
 
 export function LoginPage() {
-	return (
+  return (
 		<CentralColumn>
 			<LoginForm />
 		</CentralColumn>
-	);
+  )
 }

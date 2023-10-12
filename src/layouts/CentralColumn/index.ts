@@ -1,1 +1,1 @@
-export * from './CentralColumn';
+export * from './CentralColumn'
