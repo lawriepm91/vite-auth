@@ -1,19 +1,19 @@
-import {FC, ReactNode, createContext} from "react";
-import * as Types from './Auth.types';
-import {useAuth} from "./useAuth";
+import { type FC, type ReactNode, createContext } from 'react'
+import type * as Types from './Auth.types'
+import { useAuth } from './useAuth'
 
 export const Context = createContext<Types.Context>({
-	state: undefined,
-	dispatch: () => undefined,
-});
+  user: undefined,
+  dispatch: () => undefined
+})
 
 export const AuthProvider: FC<{ children: ReactNode }> = ({
-	children,
+  children
 }) => {
-	const {value} = useAuth();
+  const { value } = useAuth()
   return (
-		<Context.Provider value={value}>
-			{children}
-		</Context.Provider>
-	);
-};
+    <Context.Provider value={value}>
+      {children}
+    </Context.Provider>
+  )
+}

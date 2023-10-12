@@ -1,8 +1,8 @@
-import {User as UserType} from "../../types";
+import { type User as UserType } from '../../types'
 
-export type State = UserType | undefined;
+export type State = UserType | undefined
 
 export interface Context {
-	state: State;
-	dispatch(): void;
+  user: State
+  dispatch: () => void
 }
