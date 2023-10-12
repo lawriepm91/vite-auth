@@ -1,5 +1,5 @@
-import * as Types from './Auth.types';
 import {FC, ReactNode, createContext} from "react";
+import * as Types from './Auth.types';
 import {useAuth} from "./useAuth";
 
 export const Context = createContext<Types.Context>({
