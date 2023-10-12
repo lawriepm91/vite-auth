@@ -3,8 +3,8 @@ import { CentralColumn } from '../../layouts/CentralColumn'
 
 export function LoginPage() {
   return (
-		<CentralColumn>
-			<LoginForm />
-		</CentralColumn>
+    <CentralColumn>
+      <LoginForm />
+    </CentralColumn>
   )
 }

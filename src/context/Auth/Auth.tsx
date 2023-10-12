@@ -12,8 +12,8 @@ export const AuthProvider: FC<{ children: ReactNode }> = ({
 }) => {
   const { value } = useAuth()
   return (
-		<Context.Provider value={value}>
-			{children}
-		</Context.Provider>
+    <Context.Provider value={value}>
+      {children}
+    </Context.Provider>
   )
 }

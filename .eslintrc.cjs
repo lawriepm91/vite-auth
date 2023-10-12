@@ -30,5 +30,6 @@ module.exports = {
     "rules": {
       "react/react-in-jsx-scope": "off",
       "space-before-function-paren": ["error", "never"],
+      "@typescript-eslint/space-before-function-paren": ["error", "never"],
     }
 }

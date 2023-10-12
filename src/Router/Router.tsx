@@ -5,9 +5,9 @@ import { Nav } from '../layouts/Nav'
 export function Router() {
   const { routes } = useRouter()
   return (
-		<>
-			<Nav />
-			<RouterProvider router={routes} />
-		</>
+    <>
+      <Nav />
+      <RouterProvider router={routes} />
+    </>
   )
 }
