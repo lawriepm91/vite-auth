@@ -6,6 +6,6 @@ export function useAuthContext() {
 }
 
 export function useIsAuthenticated() {
-	const {state: {state}} = useAuthContext();
-	return !!state;
+	const context = useAuthContext();
+	return !!context.user;
 };

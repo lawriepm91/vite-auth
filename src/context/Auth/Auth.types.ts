@@ -3,6 +3,6 @@ import {User as UserType} from "../../types";
 export type State = UserType | undefined;
 
 export interface Context {
-	state: State;
+	user: State;
 	dispatch(): void;
 }

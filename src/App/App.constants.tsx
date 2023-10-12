@@ -1,17 +1,19 @@
 import {
 	createBrowserRouter,
 } from "react-router-dom";
+import {LoginPage} from "../pages/Login";
+import {WelcomePage} from "../pages/Welcome";
 
 export const authenticatedRoutes = createBrowserRouter([
 	{
 		path: "/",
-		element: <div>Your authenticated ...</div>,
+		element: <WelcomePage />,
 	},
 ]);
 
 export const unAuthenticatedRoutes = createBrowserRouter([
 	{
 		path: "/",
-		element: <div>Your not authenticated ...</div>,
+		element: <LoginPage />,
 	},
 ]);

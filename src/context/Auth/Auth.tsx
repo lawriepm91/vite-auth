@@ -3,11 +3,11 @@ import * as Types from './Auth.types';
 import {useAuth} from "./useAuth";
 
 export const Context = createContext<Types.Context>({
-	state: undefined,
+	user: undefined,
 	dispatch: () => undefined,
 });
 
-export const AuthProvider: FC<{ children: ReactNode }> = ({
+export const AuthProvider: FC<{children: ReactNode}> = ({
 	children,
 }) => {
 	const {value} = useAuth();
