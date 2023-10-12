@@ -1,9 +1,9 @@
 import {RouterProvider} from "react-router-dom";
-import {useApp} from "./useApp";
+import {useRouter} from "./useRouter";
 import {Nav} from "../layouts/Nav";
 
-export function App() {
-	const {routes} = useApp();
+export function Router() {
+	const {routes} = useRouter();
 	return (
 		<>
 			<Nav />
