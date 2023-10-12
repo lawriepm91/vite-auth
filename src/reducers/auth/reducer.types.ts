@@ -1,8 +1,8 @@
-import {CreateReadUpdateDeleteEnum} from "../../enums";
+import {AuthActions} from "../../actions";
 import {User} from "../../types";
 
 export interface Action {
-	type: CreateReadUpdateDeleteEnum;
+	type: AuthActions;
 	payload: User | undefined;
 }
 

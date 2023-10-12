@@ -1,12 +1,12 @@
 import {useCallback, useMemo} from "react";
 import {useAuthContext} from "../../hooks";
-import {CreateReadUpdateDeleteEnum} from "../../enums";
+import {AuthActions} from "../../actions";
 
 export function useLoginForm() {
 	const context = useAuthContext();
 	const handleSubmit = useCallback((values) => {
 		context.dispatch({
-			type: CreateReadUpdateDeleteEnum.CREATE,
+			type: AuthActions.LOGIN,
 			payload: {
 				user: {
 					email: values.email,
