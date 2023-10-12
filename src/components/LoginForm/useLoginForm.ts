@@ -4,7 +4,8 @@ import {AuthActions} from "../../actions";
 
 export function useLoginForm() {
 	const context = useAuthContext();
-	const handleSubmit = useCallback((values) => {
+	const handleSubmit = useCallback((values, {resetForm}) => {
+		// an http req would typically go here; for now, we'll just dispatch an action
 		context.dispatch({
 			type: AuthActions.LOGIN,
 			payload: {
@@ -14,12 +15,12 @@ export function useLoginForm() {
 				},
 			},
 		});
-	}, []);
+	}, [context]);
 
 	return {
 		initialValues: useMemo(() => ({
-			email: "woof@gmail.com",
-			password: "blahblahblah",
+			email: "",
+			password: "",
 		}), []),
 		handleSubmit,
 	}
